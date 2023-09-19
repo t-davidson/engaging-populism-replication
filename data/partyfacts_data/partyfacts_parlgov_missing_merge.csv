@@ -1,0 +1,156 @@
+partyfacts_id,parlgov_id,partyfacts_name,partyfacts_country,facebook_handle,twitter_handle,JE Comments
+8178,N/A,GLAS,HRV,glas.cla,strankaglas,ParlGov doesn't seem to have any record of this party (maybe they interpret it as an alliance and therefore do not list it?)
+744,1436,LL,ITA,legasalvinipremier,legasalvini,
+6688,119,CSP,BEL,csp.dg,CSPOstbelgien,
+1657,872,SPR‚Äö√Ñ√¨RS∆í√•,CZE,sprrsc.cz,,
+7343,2733,PA,FRA,parti.animaliste,PartiAnimaliste,
+8359,N/A,PG,FRA,partidegauche.national,LePG,The wikipedia page for the party says they have not yet run independently in an election (I believe they have been running with Front de Gauche) so this is probably why they are not in the ParlGov database.
+7345,2736,ODP,DEU,oedp.de,oedp_de,
+2278,2153,CD,ITA,centro.democratico.ita,,
+8247,N/A,PaP,ITA,poterealpopolo.org,potere_alpopolo,"This party ran as an electoral list (coalition) in the 2018 election and received 0% of the vote, probably why they aren't listed on Parlgov."
+8249,2659,MM,HUN,momentum.mozgalom,momentumhu,
+1702,2417,LZS,LVA,lzsropazi,,
+8257,N/A,ULL,LTU,uzlietuvalietuvoje,,Seems like this was a temporary coalition.
+6738,N/A,List,LTU,ltsarasas,,"This party gained one parliamentary seat in 2016 (which ParlGov recognizes in their election data), but they still don't have a profile for the party. Perhaps because it is too small?"
+8256,N/A,LLP,LTU,lietuvosliaudiespartija,,No seats in parliament -- only on the municipal level.
+8258,N/A,LSDS,LTU,lietuvossocialdemokratusajunga,,Same as above -- never had seats in parliament.
+7353,2766,VL,LUX,voltluxembourg,voltluxembourg,
+7355,2735,VN,NLD,voltnederland,VoltNederland,
+1079,27,NKP,NOR,norgeskommunistiskeparti,,
+4713,1549,KNP,POL,kongresnowejprawicy,NowaPrawica,
+876,1283,PR,POL,prawicarzeczypospolitej,Prawica_Rz,
+387,889,ID,PRT,intervencaodemocratica1987,,
+7358,2758,NC,PRT,noscidadaos,NOSCIDADAOS,
+1106,375,POUS/PST,PRT,pous4,,
+7033,N/A,PV,ROU,partidul.verde,verzii,No seats in parliament -- might be too small for ParlGov to recognize.
+2132,2391,NaS-NS,SVK,narod.a.spravodlivost,strana_NaS,
+6686,2803,NOVA,SVK,novavacsina,,
+3204,2385,SS,SVN,dasanjskasluzba,SanjskaSluzba,
+946,1221,PAR,ESP,partidoaragones,AragonPAR,
+6027,N/A,PDeCAT,ESP,pdemocratacat,Pdemocratacat,Do not seem to have run independently in any nationwide election.
+5623,N/A,CC,ESP,coaliciocompromis,compromis,Coalition of independent parties -- ParlGov doesn't list it as it's own party.
+8186,118,PCE,ESP,elpce,elpce,"This party has been part of United Left (Izquierda Unida) since 1986 and the ParlGov IDs are the same for this party pre- and post-merge with United Left. Since they have their own social media accounts separate from United Left, we may want to keep it for analysis but I'm not sure?"
+8185,N/A,PCPE,ESP,pcpe.web,webpcpe,Has not run independently in any successful elections.
+4796,N/A,UDC,ESP,unio.cat,,Only ran in nationwide elections with the CiU coalition (ParlGov ID 894) -- not listed in ParlGov as its own party.
+1260,2330,ICV,ESP,iniciativapercatalunyaverds,iniciativa,
+722,N/A,UPN,ESP,uniondelpueblonavarro,upn_navarra,Have only run regionally in Navarro and are the regional branch of PP.
+6632,N/A,PSOE-A,ESP,psoe.andalucia,psoedeandalucia,Andalusian branch of PSOE (which has only run for regional office); isn't recognized as an independent party by ParlGov.
+449,N/A,EU,ESP,extremaduraunida,exunida,Same here -- regional party.
+1231,26,FDP,CHE,fdp.dieliberalen,FDP_Liberalen,
+4885,N/A,CoPA,GBR,coopparty,CoopParty,"This party has run alongside/with Labour since 1927, so they do not seem to be counted as an independent party (separate from Labour) in ParlGov. "
+1675,2062,ED,GBR,www.engdem.org,EnglishDemocrat,
+8240,N/A,GP-NI,GBR,greenparty,GreenPartyNI,Has only run locally and is not registered by ParlGov.
+2050,N/A,IN,GBR,anpairtinaisiunta,NationalPartyIE,"I believe this is a very old party  (circa late 1800s). The FB and Twitter handles are for the Nationalist Party in Ireland, not the Irish Nationalist Party. "
+6687,N/A,SGP,GBR,scottishgreens,scotgp,Can't find this on ParlGov.
+1798,137,Z,DEU,zentrumspartei,zentrum1870,
+7031,465,SEL,ITA,SinistraEcologiaELibertaEuropa,SI_sinistra,
+1277,2064,SLP,GBR,socialistlabourpartyGB,slp_gb,
+1044,1292,VAS,FIN,vasemmisto,vasemmisto,
+2338,1192,CDH,BEL,lecdh,lecdh,
+5458,N/A,HKDS,HRV,demokrscanihds,HdsHrvatska,"Can't find this party on ParlGov. Seems to have only run in elections as part of a coalition until the EP election in 2019, so ParlGov may not have registered them as an independent party because of that. "
+3706,N/A,HSP-AS,HRV,hspAnteStarcevic,,Has been the member of multiple coalitions but never ran independently.
+3136,2186,AM,HRV,akcijamladih,AkcijaMladih,
+2142,2220,KAN,CZE,KANoficialni,,
+1127,2042,LIDEM,CZE,stranakonzervativnipravice,,
+7337,2739,H,CZE,hnutihlas,hnutihlas,
+6651,74,Siumut,DNK,partiisiumut,,
+7030,806,SKP,FIN,suomenkommunistinenpuolue,Kommunistit,
+1177,2078,AC,FRA,alliancecentriste,AllianceC,
+496,509,MoDem,FRA,mouvementdemocrate,MoDem,
+7342,2732,Gs,FRA,GenerationsLeMvt,GenerationsMvt,
+61,1131,BP,DEU,Bayernpartei,Bayernpartei,
+211,1727,CDU/CSU,DEU,cducsubundestagsfraktion,cducsubt,
+7346,2744,E-OAD,GRC,elladaoallosdromos,,
+2508,2167,KEK,GRC,kommaellinonkinigon,,
+8242,N/A,AAA / S,IRL,solidarityie,solidarityie,Has only run in coalitions.
+4,2217,SF,IRL,sinnfein,sinnfeinireland,
+1448,1014,SP,IRL,SocialistPartyIreland,SocialistParty,
+1978,N/A,ULA,IRL,UnitedLeftAlliance,,Alliance that was formed to contest 2011 election. Hasn't existed since/before then.
+8361,N/A,Art.1,ITA,Articolo1Modempro,articoloUnoMDP,Has only run in coalitions.
+8244,N/A,CPI,ITA,casapounditalia,CasaPoundItalia,This is a very small party and I can't find it on ParlGov.
+8248,1296,RI,ITA,radicali,Radicali,
+394,93,PRI,ITA,PartitoRepubblicanoItalianoOFFICIAL,,
+772,502,PP,ITA,famigliapensionati,part_pensionati,
+365,596,IPdL,ITA,IlPopolodellaLiberta2018,,
+7671,N/A,IEI,ITA,insieme2018,insieme2018,2018 coalition.
+5657,1520,LKS/RSL,LVA,rusojuz,,
+7619,521,NA,LVA,NacionalaApvieniba,VL_TBLNNK,
+-99999999,N/A,N/A,AUT,EuropaAnders,EuropaAnders,Alliance for EU elections.
+-99999999,2810,M!,HRV,mozemo.hr,mozemoHR,
+-99999999,N/A,N/A,HRV,narodnakoalicija,,Coalition
+-99999999,N/A,N/A,HRV,novaljevica.hr,NLjevica,Have only run as a coalition with other parties -- not listed as independent party
+-99999999,N/A,N/A,HRV,hrsuverenisti,suverenisti,"Not sure about this one, can't find it anywhere."
+-99999999,N/A,N/A,CZE,narodnidemokracie,NarDemokracie,Seems to never have run independently
+-99999999,N/A,N/A,FRA,resistonsfrance,ResistonsFrance,Banner for a single politician
+-99999999,N/A,N/A,FRA,solidariteetprogres,SetP_officiel,"Not sure about this one, can't find it anywhere."
+-99999999,1235,N/A,DEU,FamilienParteiDeutschlands,,
+-99999999,2596,N/A,GRC,plefsieleftherias,pl_eleftherias,
+-99999999,N/A,N/A,GRC,PiratePartyGR,PiratepartyGR,"Not sure about this one, can't find it anywhere."
+-99999999,N/A,N/A,GRC,metopo,epamhellas,"Not sure about this one, can't find it anywhere."
+-99999999,N/A,N/A,GRC,koinwnia,koinwnia,"Not sure about this one, can't find it anywhere."
+-99999999,N/A,N/A,GRC,eek.trotskistes,,"Not sure about this one, can't find it anywhere."
+-99999999,N/A,N/A,HUN,AHazaPartja,,"Not sure about this one, can't find it anywhere."
+429,1794,TEE,EST,iseseisvuspartei,,
+604,723,CD&V,BEL,cdenv,cdenv,
+1968,993,VB,BEL,vlbelang,vlbelang,
+1793,535,Attack,BGR,ataka.pobeda,,
+757,982,BSP,BGR,BulgarianSocialistParty,BSP_Bulgaria,
+6115,N/A,OP,BGR,obedinenipatrioti,,Have only run as a coalition (in 2017) and ParlGov does not list them as an independent party.
+7422,2770,NHR,HRV,NHRvatsku,,
+333,749,Fobe,DNK,FolkebevaegelsenModEU,Folkebevagelsen,
+4094,417,EKRE,EST,rahvuspartei,,
+5650,873,EELV,FRA,eelv.fr,EELV,
+1629,1414,CNIP,FRA,CNIPGrandEst,CNIP_FR,
+6684,N/A,NPA,FRA,npa2009,NPA_officiel,Ran a candidate in presidential elections but not parliament.
+7344,2734,UPR,FRA,upr.francoisasselineau,UPR_Officiel,
+8168,658,LR,FRA,les.Republicains.FR,lesRepublicains,
+749,301,Tier,DEU,Tierschutzpartei,Tierschutzparte,
+7909,N/A,KINAL,GRC,kinimallagis,kinimallagis,This is an electoral alliance -- ParlGov lists the parties included as independent parties.
+7349,2745,MHM,HUN,mihazank,MiHazank,
+8265,N/A,‚àö√±,HUN,osszefogas.spolupatricnost,,Electoral alliance formed to contest the 2014 elections.
+3209,2371,DDI,IRL,directdemocracyireland,ddi,
+1055,280,FF,IRL,fiannafail,fiannafailparty,
+1288,1393,FG,IRL,FineGael,FineGael,
+1775,1573,Greens,IRL,GreenPartyIreland,greenparty_ie,
+562,318,Lab,IRL,thelabourparty,labour,
+242,1804,PBPA,IRL,peopleb4profit,pb4p,
+4869,2620,RI,IRL,renuairl,RENUAIreland,
+4870,2619,DS,IRL,socialdemocratsireland,SocDems,
+208,433,WP,IRL,workerspartyireland,workersparty,
+8058,596,FI,ITA,ForzaItaliaUfficiale,forza_italia,
+8246,465,LeU,ITA,liberieuguali2018,liberi_uguali,
+8057,1048,IBC,ITA,italiaincomune,ItaliainComune,
+2052,2268,NCD,ITA,emanuele.esposito.3939503,,
+6685,N/A,TSIPRAS,ITA,AltraEuropaConTsipras,altraeuropa,Ran in an electoral alliance in EP election of 2014 - not listed as independent party
+6158,N/A,NcI,ITA,NoiconlitaliaOfficial,noiconitalia,I have no idea what this party is -- this partyfacts ID doesn't lead to anything and I can't find it on ParlGov either.
+8393,N/A,AP!,LVA,Attistibai.Par,AttistibaiPar,Alliance
+5976,1100,SDPS,LVA,sdpsLV,,
+377,432,LTS,LTU,tautininkai,,
+62,360,AD,MLT,alternattiva,adpd_mt,
+7354,2759,PD,MLT,PartitDemokratiku,Demokratiku,
+808,1003,MLP,MLT,partitlaburista,PL_Malta,
+699,984,PN,MLT,partitnazzjonalista,PNmalta,
+1477,2731,APNI,NIR,alliancepartyni,allianceparty,
+335,319,DUP,NIR,democraticunionistparty,,
+694,N/A,NIC,NIR,niconservatives,NIConservative,Section of England's Conservatives.
+642,N/A,PUP,NIR,ProgressiveUnionistPartyNi,officialPUP,Can't find on ParlGov
+963,689,SF,NIR,sinnfein,,
+762,1023,SDLP,NIR,SocialDemocraticLabourParty,,
+1763,1210,UUP,NIR,ulsterunionistparty,uuponline,
+3698,1638,DT,NOR,Roedt,Raudt,
+328,2372,SP,POL,solidarnapl,SolidarnaPL,
+7357,2756,A,PRT,partidoalianca,Partido_Alianca,
+886,1535,PEV,PRT,PartidoEcologistaOsVerdes,OsVerdes,
+1373,792,PER,ROU,PartidulESR,,
+7360,2750,KU,SVK,KrestanskaUniaOfficial,,
+3208,2389,PaS,SVK,pisorgpl,pisorgpl,
+8177,2752,Spolu,SVK,stranaspolu,StranaSPOLU,
+7363,2755,Pose,SVN,povezimo.se,povezimo_se,
+7362,2754,DOM,SVN,domovinskaliga,DomovinskaLiga,
+3220,2386,S,SVN,solidarnost.si,Solidarnost_si,
+5853,771,CEP,ESP,ceuscoalition,CEUScoalition,
+586,N/A,PSC-PSOE,ESP,PSC,socialistes_cat,Local party branch
+7421,2605,JxCat,ESP,JxCatalunya,JuntsXCat,
+1485,721,PP,SWE,piratpartiet,piratpartiet,
+1477,2731,All,NIR,alliancepartyni,allianceparty,
+8360,433,PO,IRL/NIR,workerspartyireland,workersparty,
