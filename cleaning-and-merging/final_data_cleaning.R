@@ -1,7 +1,7 @@
 # Final data cleaning to prepare dataset for modeling
 
 library(tidyverse)
-`%notin%` <- Negate(`%in%`) # Defining a helper function 
+`%notin%` <- Negate(`%in%`) # Defining a helper function
 
 # This script performs several assorted functions on the merged data:
 # 1. Imputing missing ideology (mean)
@@ -16,7 +16,7 @@ library(tidyverse)
 data <- read_csv("../data/final_merged_data/final_merged_dataset.csv") %>% filter(year >= 2010) %>%
     filter(year <= 2020) %>% distinct(.keep_all = TRUE) # Just get years between 2010 and 2020
 
-# Imputing missing ideology 
+# Imputing missing ideology
 # These parties are either centrist populists, regional, or special issue
 data <- data %>% replace_na(list(left_right = 5))
 
@@ -41,11 +41,20 @@ party_scaled <- data %>% group_by(parlgov_id) %>%
 cy_scaled <- data %>% group_by(country, year) %>%
     summarize(gdp = mean(gdp),
               pop = mean(pop),
-              everyday_social_networks_imputed = mean(everyday_social_networks_imputed)) %>%
+              everyday_social_networks_imputed = mean(everyday_social_networks_imputed),
+              gdp_growth = mean(gdp_growth),
+              net_migr = mean(net_migr),
+              refugee = mean(refugee),
+              refugee_change = mean(refugee_change)) %>%
     mutate(gdp_s = as.numeric(scale2sd(gdp)),
            pop_s = as.numeric(scale2sd(pop)),
-           everyday_social_networks_imputed_s = as.numeric(scale2sd(everyday_social_networks_imputed))) %>%
-    select(country, year, gdp_s, pop_s, everyday_social_networks_imputed_s)
+           everyday_social_networks_imputed_s = as.numeric(scale2sd(everyday_social_networks_imputed)),
+           gdp_growth_s = as.numeric(scale2sd(gdp_growth)),
+           net_migr_s =  as.numeric(scale2sd(net_migr)),
+           refugee_s = as.numeric(scale2sd(refugee)),
+           refugee_change_s = as.numeric(scale2sd(refugee_change))) %>%
+    select(country, year, gdp_s, pop_s, everyday_social_networks_imputed_s, gdp_growth_s, net_migr_s, refugee_s,
+           refugee_change_s)
 
 data <- data %>% left_join(party_scaled, by = "parlgov_id") %>% left_join(cy_scaled, by = c("country", "year"))
 
@@ -79,12 +88,12 @@ facebook.active <- data.fb %>% drop_na(handle) %>% filter(facebook_active == 1) 
     summarize(total_active = sum(facebook_active),
               duration = 1+max(year) - min(year)) %>% mutate(diff = total_active - duration)
 
-# These parties have gaps in their Twitter activity.  
-mm.tw <- twitter.active %>% filter(diff < 0) 
+# These parties have gaps in their Twitter activity.
+mm.tw <- twitter.active %>% filter(diff < 0)
 data.tw.mm <- data.tw %>% filter(twitter_handle %in% mm.tw$twitter_handle) # Shows activity
 
-# These parties have gaps in their FB activity.  
-mm.fb <- facebook.active %>% filter(diff < 0) 
+# These parties have gaps in their FB activity.
+mm.fb <- facebook.active %>% filter(diff < 0)
 data.fb.mm <- data.fb %>% filter(handle %in% mm.fb$handle) # Shows activity
 
 data.tw.mm.gap <- data.tw.mm %>% select(twitter_handle, total_tweets, year, twitter_active) %>%
@@ -133,7 +142,7 @@ data.tw.mm.gap.2 <- bind_rows(data.tw.mm.gap.2.kb, data.tw.mm.gap.2.ka)
 
 # Now to merge
 # 1. Drop the parties with gaps
-data.tw <- data.tw %>% filter(twitter_handle %notin% mm.tw$twitter_handle) 
+data.tw <- data.tw %>% filter(twitter_handle %notin% mm.tw$twitter_handle)
 # 2. Filter the gap table using the final non-gap table
 data.tw.mm <- data.tw.mm %>% semi_join(data.tw.mm.gap.2, by = c("year", "twitter_handle"))
 # 3. Add the rows back in
@@ -203,7 +212,7 @@ data.tw <- data.tw %>% group_by(handle) %>%
 # Filtering rows where handle is either incorrect, duplicate, or removed due to data issues
 data.fb <- data.fb %>% filter(handle %notin% c("esquerda.net", "bulgariabezcenzurabs",
                                                "uniapolitykirealnej", "mysme99percent", "ceuscoalition",
-                                               "elpce", # Duplicate PG 
+                                               "elpce", # Duplicate PG
                                                "kommaellinonkinigon")) # Drop 23 rows
 data.fb <- data.fb %>% filter(parlgov_id != 2211) # Removing duplicate BGR party with incorrect PG ID
 data.tw <- data.tw %>% filter(twitter_handle %notin% c("upr_org", "vermelhaestrela",
@@ -211,7 +220,7 @@ data.tw <- data.tw %>% filter(twitter_handle %notin% c("upr_org", "vermelhaestre
 data.fb <- data.fb %>% filter(!(country == "LVA" & year == 2011)) # ~0 activity in this CY
 
 # Filtering out parties to require at least two years of observations
-data.fb <- data.fb %>% filter(years_observed >= 2) 
+data.fb <- data.fb %>% filter(years_observed >= 2)
 data.tw <- data.tw %>% filter(years_observed >= 2)
 
 # Filtering by activity and engagement. Dropped if less than 100 total posts & less than 100 total likes
@@ -245,7 +254,7 @@ write_csv(data.fb, "../robustness/sinnfein_analysis/model_dataset_fb_sf.csv")
 write_csv(data.tw, "../robustness/sinnfein_analysis/model_dataset_tw_sf.csv")
 
 # Performing modifications to re-weight Sinn Fein observations
-pop.data <- data.tw %>% filter(country %in% c("IRL", "NIR") & twitter_handle == "sinnfeinireland") %>% group_by(country, year) %>% select(country, year, pop, mean_vote_share) %>% distinct(.keep_all = T) 
+pop.data <- data.tw %>% filter(country %in% c("IRL", "NIR") & twitter_handle == "sinnfeinireland") %>% group_by(country, year) %>% select(country, year, pop, mean_vote_share) %>% distinct(.keep_all = T)
 pop.data <- pop.data %>% mutate(sf_voters = pop * (mean_vote_share/100))
 nir <- pop.data %>% filter(country == "NIR")
 irl <- pop.data %>% filter(country == "IRL")
@@ -259,13 +268,13 @@ print(sf_prop)
 data.fb <- data.fb %>%
     left_join(sf_prop, by = "year") %>%
     mutate(
-        #total_posts = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_posts * prop, 
+        #total_posts = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_posts * prop,
         #                     ifelse(parlgov_id %in% c(689, 2217) & country == "IRL", total_posts* (1 - prop), total_posts)),
-        total_likes = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_likes * prop, 
+        total_likes = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_likes * prop,
                              ifelse(parlgov_id %in% c(689, 2217) & country == "IRL", total_likes * (1 - prop), total_likes)),
-        total_shares = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_shares * prop, 
+        total_shares = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_shares * prop,
                               ifelse(parlgov_id %in% c(689, 2217) & country == "IRL", total_shares * (1 - prop), total_shares)),
-        total_comments = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_comments * prop, 
+        total_comments = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_comments * prop,
                                 ifelse(parlgov_id %in% c(689, 2217) & country == "IRL", total_comments * (1 - prop), total_comments))
     ) %>%
     select(-prop)  # Remove the 'prop' column if you don't need it anymore
@@ -274,15 +283,15 @@ data.tw <- data.tw %>%
     left_join(sf_prop, by = "year") %>%
     mutate(
         # Avoid doing this to tweets, just modify engagements
-        #total_tweets = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_tweets * prop, 
+        #total_tweets = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_tweets * prop,
         #                      ifelse(parlgov_id %in% c(689, 2217) & country == "IRL", total_tweets * (1 - prop), total_tweets)),
-        total_likes_tw = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_likes_tw * prop, 
+        total_likes_tw = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_likes_tw * prop,
                                 ifelse(parlgov_id %in% c(689, 2217) & country == "IRL", total_likes_tw * (1 - prop), total_likes_tw)),
-        total_retweets = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_retweets * prop, 
+        total_retweets = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_retweets * prop,
                                 ifelse(parlgov_id %in% c(689, 2217) & country == "IRL", total_retweets * (1 - prop), total_retweets)),
-        total_replies = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_replies * prop, 
+        total_replies = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_replies * prop,
                                ifelse(parlgov_id %in% c(689, 2217) & country == "IRL", total_replies * (1 - prop), total_replies)),
-        total_tweets_rt = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_tweets_rt * prop, 
+        total_tweets_rt = ifelse(parlgov_id %in% c(689, 2217) & country == "NIR", total_tweets_rt * prop,
                                  ifelse(parlgov_id %in% c(689, 2217) & country == "IRL", total_tweets_rt * (1 - prop), total_tweets_rt))
     ) %>%
     select(-prop)  # Remove the 'prop' column if you don't need it anymore
