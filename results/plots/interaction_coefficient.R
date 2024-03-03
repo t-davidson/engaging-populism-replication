@@ -103,9 +103,10 @@ levels(final_results$Covariate) <- list("GDP change\n(%)" = "gdp_growth",
                                       "Unemp. rate\n(%)" = "unemp_ilo",
                                       "Net migration\n(2SD)"  = "net_migr_s",
                                       "Refugee pop.\nchange (2SD)" = "refugee_change_s",
+                                      Election = "election_year1",
                                       "Social media\nadoption (%)" = "everyday_social_networks_imputed",
-                                      "Internet\nadoption (%)" = "internet_adoption",
-                                      Election = "election_year1")
+                                      "Internet\nadoption (%)" = "internet_adoption"
+                                      )
 
 # Making plot showing all coefficients
 p <- final_results %>% ggplot(aes(y = fct_rev(Outcome), x = exp(.value), xmin = exp(.lower), xmax = exp(.upper), color = Populism, group = Populism)) +
