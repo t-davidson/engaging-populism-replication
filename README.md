@@ -1,7 +1,7 @@
 # Guide to data and code to replicate Engaging Populism
 
 Thomas Davidson
-3/6/2024
+6/17/2024
 
 # Codebase
 
@@ -64,7 +64,7 @@ Note: For our analyses, these models were run on a remote server and the results
 
 ## Analyzing the results
 
-The final models are stored as `.RData` objects output by `brms`. These can be read into memory to extract various information used to produce the figures and tables. Our final fitted models are included with this replication package, so it is not necessary to re-estimate the models in order to reproduce our results. TODO: Add way to access these models as some too large for Github.
+The final models are stored as `.RData` objects output by `brms`. These can be read into memory to extract various information used to produce the figures and tables. Our final fitted models are included with this replication package, so it is not necessary to re-estimate the models in order to reproduce our results. These models are too large to be stored on Github but can be downloaded using this [Google Drive](https://drive.google.com/drive/folders/1DNpAeBIZ-jlQuwhWPZ0RjqpcGcrod9KJ?usp=sharing) link. Please contact the lead author if the link does not work.
 
 The `results` folder contains scripts used to produce results in the paper as well as directories containing various figures and tables. 
 
