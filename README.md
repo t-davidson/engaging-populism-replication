@@ -1,11 +1,13 @@
-# Guide to data and code to replicate Engaging Populism
+# Replication materials for Engaging Populism
 
-Thomas Davidson
-6/17/2024
+Last edited 6/17/2024
+
+This repository contains replication materials for Thomas Davidson and Jenny Enos. Forthcoming. "Engaging Populism? The Popularity of European Populist Political Parties on Facebook and Twitter, 2010-2020." *Political Communication* doi: https://doi.org/10.1080/10584609.2024.2369118
+
+Please get in touch via email if you have any questions.
 
 # Codebase
-
-This repository contains all files necessary to replicate our analyses as well as code and documentation on our data preparation. The following sections detail the organization of the data and processes for data cleaning and merging, the estimation of the models, and the construction of the results.
+The following sections detail the organization of the data and processes for data cleaning and merging, the estimation of the models, and the construction of the results.
 
 At a high-level, our analyses can be replicated by running the scripts to process and merge the data (`cleaning-and-merging`), estimating the models (`models`), then finally generating the figures and tables (`results`). Since we are providing the full output from our model estimation, the final results can be reproduced simply by using these files to produce the figures and tables without needing to perform the intermediate steps.
 
