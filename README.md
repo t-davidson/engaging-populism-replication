@@ -15,7 +15,7 @@ The following describes the data sources used in the analyses. See the following
 
 ### Social media data
 
-The Facebook and Twitter posts were collected from the respective APIs. These APIs require authorization and the Twitter Academic API is no longer active, but example scripts to show how these APIs were queried are contained in (TODO).
+The Facebook and Twitter posts were collected from the respective APIs. These APIs require authorization and the Twitter Academic API is no longer active, but example scripts to show how these APIs were queried are contained in `data-collection`.
 
 Tables containing raw social media data collected from the APIs are stored in `facebook_data_raw` and `twitter_data_raw`, respectively. The versions of these data used in the final country-year analyses are contained in `facebook_data_cleaned` and `twitter_data_cleaned`. The process for construct this data are described below.
 
