@@ -6,6 +6,10 @@ This repository contains replication materials for Thomas Davidson and Jenny Eno
 
 Please get in touch via email if you have any questions.
 
+# Version information
+
+Most analyses were performed on a Macbook Pro laptop using R and are compatible with the latest version as of publication (4.1.2). The main estimation procedures were executed using the [Amarel high-performance computing cluster](https://oarc.rutgers.edu/resources/amarel/) at Rutgers University, a Linux-based environment consisting of a large gluster of compute nodes that can be used to execute processes in parallel.
+
 # Codebase
 The following sections detail the organization of the data and processes for data cleaning and merging, the estimation of the models, and the construction of the results.
 
@@ -48,7 +52,7 @@ Some additional cleaning steps are used to prepare the merged data for modeling.
 
 ## Estimating the models
 
-All models reported in the paper were estimated using a SLURM High-Performance Compute cluster. This design is advantageous as it allows multiple models to be estimated simultaneously rather than in linear order.
+All models reported in the paper were estimated using the [`brms`](https://paul-buerkner.github.io/brms/) R package and [RStan](https://mc-stan.org/users/interfaces/rstan).  The analysis was performed using a SLURM high-performance compute cluster, which allows multiple models to be estimated simultaneously rather than in linear order, significantly reducing the compute time.
 
 This infrastructure necessitates each model to be stored in a separate script, such that the SLURM controller can run separate scripts. As such, our models are organized in the following way:
 
